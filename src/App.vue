@@ -62,7 +62,7 @@ const itemsReadOnly = [
       :generalIsError="isError"
     />
 <!-- Второй компонент Select с данными для ReadOnly -->
-    <h1>Select Component Example Vue 3</h1>
+    
     <h2>readOnly:true</h2>
     <Select
       :items="itemsReadOnly"
