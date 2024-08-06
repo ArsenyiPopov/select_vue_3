@@ -37,7 +37,7 @@ const itemsReadOnly = [
   { name: 'Газпром', isError: true, errorMessage: 'Газпром недоступен для выбора', readOnly: false },
   { name: 'Норильский никель', isError: false, errorMessage: '', readOnly: false },
   { name: 'Татнефть', isError: false, errorMessage: '', readOnly: false },
-  { name: 'Сахалинская энергия', isError: false, errorMessage: '', readOnly: true },
+  { name: 'Сахалинская энергия', isError: true, errorMessage: 'Сахалинская все', readOnly: true },
   { name: 'Сбербанк', isError: false, errorMessage: '', readOnly: false },
   { name: 'Фосагро', isError: false, errorMessage: '', readOnly: false },
   { name: 'Арктикгаз', isError: false, errorMessage: '', readOnly: false },

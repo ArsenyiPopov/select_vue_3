@@ -31,8 +31,8 @@ const select = (item) => {
   left: 0;
   right: 0;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  background: white;
+  border-radius: 14px;
+  background-color: #EDEFF3;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -48,7 +48,7 @@ const select = (item) => {
     white-space: nowrap;
 
     &:hover {
-      background: #f0f0f0;
+      background: #f5f7fb;
     }
   }
 }
