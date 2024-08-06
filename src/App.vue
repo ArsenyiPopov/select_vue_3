@@ -54,22 +54,22 @@ const itemsReadOnly = [
     <Select
       :items="items"
       placeholder="Placeholder"
-      title="title:"
+      title="Title:"
       hintIcon="ℹ️"
-      hintText="Choose your company"
+      hintText="Text example"
       :validateFn="validateFunction"
       :generalErrorMessage="errorMessage"
       :generalIsError="isError"
     />
 <!-- Второй компонент Select с данными для ReadOnly -->
     
-    <h2>readOnly:true</h2>
+    <h2 class="readOnly_title">readOnly:true</h2>
     <Select
       :items="itemsReadOnly"
       placeholder="Placeholder"
-      title="title:"
+      title="Title:"
       hintIcon="ℹ️"
-      hintText="Choose your company"
+      hintText="Text example"
       :validateFn="validateFunction"
       :generalErrorMessage="errorMessage"
       :generalIsError="isError"
@@ -78,5 +78,8 @@ const itemsReadOnly = [
 </template>
 
 <style scoped>
-/* Добавьте свои стили при необходимости */
+.readOnly_title {
+  margin-top: 50px;
+}
+
 </style>
