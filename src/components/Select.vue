@@ -148,6 +148,12 @@ const selectItem = (item) => {
     companyErrorMessage.value = '';
   }
   generalErrorState.value = false;
+
+  // Сразу обновим инпут и сбросим фокус
+  nextTick(() => {
+    const input = document.querySelector('.select-input');
+    if (input) input.blur();
+  });
 };
 
 const toggleDropdown = () => {
