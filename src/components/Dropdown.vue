@@ -29,7 +29,7 @@ const select = (item) => {
 <style lang="scss">
 .dropdown {
   position: absolute;
-  top: calc(100% + 6px); /* 10px spacing */
+  top: calc(100% + 6px); 
   left: 0;
   right: 0;
   border: 1px solid #ccc;
@@ -40,13 +40,13 @@ const select = (item) => {
   margin: 0;
   z-index: 1000;
   max-height: 250px;
-  overflow: hidden; /* скрыть содержимое, выходящее за пределы */
+  overflow: hidden; 
 }
 
 .dropdown-content {
   max-height: inherit;
   overflow-y: auto;
-  border-radius: inherit; /* для внутреннего контейнера */
+  border-radius: inherit; 
   margin: 0;
   padding: 0;
 }

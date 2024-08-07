@@ -49,8 +49,8 @@ const itemsReadOnly = [
 <template>
   <div>
     <!-- Первый компонент Select с данными isError: true -->
-    <h1>Select Component Example Vue 3</h1>
-    <h2>isError: true</h2>
+    <h1 class="select_title">Select Component Example Vue 3</h1>
+    
     <Select
       :items="items"
       placeholder="Placeholder"
@@ -78,8 +78,12 @@ const itemsReadOnly = [
 </template>
 
 <style scoped>
+.select_title {
+  margin-bottom: 30px;
+}
 .readOnly_title {
   margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 </style>
