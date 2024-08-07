@@ -62,7 +62,6 @@ const items = [
 Пример настройки компонента `Select`:
 
 ```javascript
-const items = [
   <Select
   :items="items"
   placeholder="Placeholder"
@@ -73,7 +72,6 @@ const items = [
   :generalErrorMessage="errorMessage"
   :generalIsError="isError"
 />
-];
 ```
 
 ## Состояния компонента
