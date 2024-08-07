@@ -48,8 +48,6 @@
   </div>
 </template>
 
-
-
 <script setup>
 import { ref, computed, nextTick, watch } from 'vue';
 import Dropdown from './Dropdown.vue';
@@ -102,10 +100,8 @@ const onInput = () => {
 const onFocus = () => {
   if (isReadOnly.value) return;
   previousValue.value = searchQuery.value;
-  if (isItemSelected.value) {
-    searchQuery.value = '';
-    isItemSelected.value = false;
-  }
+  searchQuery.value = '';
+  isItemSelected.value = false;
   isOpen.value = true;
   currentPlaceholder.value = props.searchPlaceholder;
 };
@@ -116,7 +112,6 @@ const onBlur = () => {
       searchQuery.value = previousValue.value;
       isOpen.value = false;
       currentPlaceholder.value = props.placeholder;
-      // Validate the old value to clear any lingering error states
       validateInput(previousValue.value);
     }
   });
@@ -156,7 +151,6 @@ const filteredItems = computed(() => {
     .filter(item => item.name.toLowerCase().includes(searchQuery.value.toLowerCase()))
     .filter(item => !item.readOnly);
 });
-
 
 const validateInput = (input) => {
   if (props.validateFn) {
