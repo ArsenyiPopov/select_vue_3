@@ -32,7 +32,7 @@
         v-if="!isReadOnly"
         class="icon"
         :class="{ 'arrow-up': isOpen, 'arrow-down': !isOpen }"
-        @click="toggleDropdown"
+        @click="onArrowClick"
       >
       <svg v-if="!isOpen" width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 3L6.5 8L1 3" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -117,6 +117,14 @@ const onBlur = () => {
   });
 };
 
+const onArrowClick = () => {
+  if (isOpen.value) {
+    isOpen.value = false;
+  } else {
+    onFocus();
+  }
+};
+
 const selectItem = (item) => {
   if (item.readOnly) return;
 
@@ -139,11 +147,6 @@ const selectItem = (item) => {
     const input = document.querySelector('.select-input');
     if (input) input.blur();
   });
-};
-
-const toggleDropdown = () => {
-  if (isReadOnly.value) return;
-  isOpen.value = !isOpen.value;
 };
 
 const filteredItems = computed(() => {
