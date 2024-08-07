@@ -13,6 +13,23 @@
   - `errorMessage` (String): Сообщение об ошибке для данного элемента.(не обязательное свойство)
   - `readOnly` (Boolean): Указывает, доступен ли элемент только для чтения.
   (не обязательное свойство)
+  ### Пример данных
+
+Пример данных, которые могут быть переданы в компонент `Select`:
+
+```javascript
+const items = [
+  { name: 'Газпром', isError: true, errorMessage: 'Газпром недоступен для выбора', readOnly: false },
+  { name: 'Норильский никель', isError: false, errorMessage: '', readOnly: false },
+  { name: 'Татнефть' },
+  { name: 'Сахалинская энергия' },
+  { name: 'Сбербанк', isError: false, errorMessage: '', readOnly: false },
+  { name: 'Фосагро', isError: false, errorMessage: '', readOnly: false },
+  { name: 'Арктикгаз', isError: false, errorMessage: '', readOnly: false },
+  { name: 'Лаборатория Касперского', isError: false, errorMessage: '', readOnly: false },
+  { name: 'Центральное КБ морской техники «Рубин»', isError: false, errorMessage: '', readOnly: false },
+];
+```
 
 ### `placeholder`
 - **Тип:** String
@@ -41,6 +58,23 @@
 ### `generalIsError`
 - **Тип:** Boolean
 - **Описание:** Указывает, есть ли общая ошибка.
+
+Пример настройки компонента `Select`:
+
+```javascript
+const items = [
+  <Select
+  :items="items"
+  placeholder="Placeholder"
+  title="Title:"
+  hintIcon="ℹ️"
+  hintText="Text example"
+  :validateFn="validateFunction"
+  :generalErrorMessage="errorMessage"
+  :generalIsError="isError"
+/>
+];
+```
 
 ## Состояния компонента
 
