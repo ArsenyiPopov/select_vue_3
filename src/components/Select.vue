@@ -242,8 +242,12 @@ watch(() => props.generalIsError, (newVal) => {
   }
 
   &:read-only {
-    background-color: #f5f7fb; /* Gray background for read-only */
-    cursor: not-allowed; /* Not-allowed cursor for read-only */
+    background-color: #f5f7fb;
+    cursor: not-allowed;
+  }
+
+  &:read-only:focus {
+    outline: none; 
   }
 }
 
