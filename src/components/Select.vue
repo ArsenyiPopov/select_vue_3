@@ -44,9 +44,10 @@
     </div>
     <p v-if="generalErrorState" class="error-message">{{ generalErrorMessage }}</p>
     <p v-if="companyErrorState" class="error-message">{{ companyErrorMessage }}</p>
-    <Dropdown v-if="isOpen && !isReadOnly" :items="filteredItems" @select="selectItem" />
+    <Dropdown v-if="isOpen && !isReadOnly && filteredItems.length" :items="filteredItems" @select="selectItem" />
   </div>
 </template>
+
 
 <script setup>
 import { ref, computed, nextTick, watch } from 'vue';
@@ -154,6 +155,7 @@ const filteredItems = computed(() => {
     .filter(item => item.name.toLowerCase().includes(searchQuery.value.toLowerCase()))
     .filter(item => !item.readOnly);
 });
+
 
 const validateInput = (input) => {
   if (props.validateFn) {
@@ -265,7 +267,7 @@ watch(() => props.generalIsError, (newVal) => {
   border-radius: 4px;
   font-size: 0.75rem;
   white-space: nowrap;
-  z-index: 1;
+  z-index: 1001;
 }
 
 .icon {
